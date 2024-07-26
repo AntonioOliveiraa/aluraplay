@@ -1,4 +1,4 @@
-import { conectaApi, ConectaApi } from "./conectaApi.js";
+import { conectaApi } from "./conectaApi.js";
 
 const lista = document.querySelector("[data-lista]");
 
