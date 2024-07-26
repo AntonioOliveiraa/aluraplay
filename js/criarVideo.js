@@ -1,16 +1,15 @@
-import { conectaAPI } from "./conectaApi.js";
+import { conectaApi } from "./conectaApi.js";
 const formulario = document.querySelector("[data-formulario]");
 
 async function criarVideo(evento) {
     evento.preventDefault();
 
-    const imagem  = document.querySelector("[data-imagem]").value;
+    const imagem = document.querySelector("[data-imagem]").value;
     const url = document.querySelector("[data-video]").value;
     const titulo = document.querySelector("[data-titulo]").value;
     const descricao = Math.floor(Math.random() * 10).toString();
 
-    await conectaAPI.criarVideo(titulo, descricao, url, imagem);
-
+    await conectaApi.criarVideo(titulo, descricao, url, imagem);
     window.location.href = "..pages/envio-concluido.html";
 }
 
